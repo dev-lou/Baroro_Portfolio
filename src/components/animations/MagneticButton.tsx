@@ -40,22 +40,26 @@ export function MagneticButton({
     y.set(0);
   };
 
-  const MotionTag = as === "a" ? motion.a : motion.button;
+  const commonProps = {
+    onMouseMove: handleMouseMove,
+    onMouseLeave: handleMouseLeave,
+    style: { x: springX, y: springY },
+    whileTap: { scale: 0.95 },
+    className,
+    ...props
+  };
+
+  if (as === "a") {
+    return (
+      <motion.a ref={ref as React.Ref<HTMLAnchorElement>} {...commonProps}>
+        {children}
+      </motion.a>
+    );
+  }
 
   return (
-    <MotionTag
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        x: springX,
-        y: springY,
-      }}
-      whileTap={{ scale: 0.95 }}
-      className={className}
-      {...props}
-    >
+    <motion.button ref={ref as React.Ref<HTMLButtonElement>} {...commonProps}>
       {children}
-    </MotionTag>
+    </motion.button>
   );
 }
