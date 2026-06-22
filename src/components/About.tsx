@@ -13,8 +13,8 @@ export function About() {
           </p>
           <p>
             I specialize in full-stack development with a focus on modern web applications, mobile apps, search engine
-            optimization, and AI-powered solutions. I help startups and teams streamline their processes through
-            scalable software solutions.
+            optimization, and AI-powered solutions. I help fellow students build activities and programs for their
+            projects through scalable software solutions.
           </p>
           <p>
             Lately, I&apos;ve been diving deeper into the world of artificial intelligence, focusing on integrating AI tools
