@@ -44,10 +44,10 @@ export function WelcomeModal() {
 
             <div className="relative z-10 text-center mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-2">
-                Choose Your Experience
+                Select Your Experience
               </h2>
               <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto">
-                Welcome! Which version of my portfolio would you like to view?
+                Welcome! Click on an option below to explore my portfolio.
               </p>
             </div>
 
@@ -79,6 +79,9 @@ export function WelcomeModal() {
                     Note: Proceed here for the current demo, sir!
                   </span>
                 </div>
+                <div className="mt-4 text-[11px] font-bold text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                  Click to explore <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
+                </div>
               </button>
 
               {/* Option 2: Creative Site */}
@@ -95,13 +98,16 @@ export function WelcomeModal() {
                 <p className="text-xs text-muted-foreground mb-3">
                   High-end animations, 3D, and immersive scrollytelling.
                 </p>
-                <div className="relative flex items-center justify-center w-full px-4 py-3 mt-2">
+                <div className="relative flex items-center justify-center w-full px-4 py-3 mt-auto">
                   <svg className="absolute inset-0 w-full h-full text-zinc-500/10 dark:text-zinc-500/20" preserveAspectRatio="none" viewBox="0 0 200 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M 10,5 C 60,10 140,-5 190,10 C 200,40 195,80 185,95 C 130,100 70,105 15,90 C 5,60 -5,20 10,5 Z" />
                   </svg>
                   <span className="relative z-10 text-[11px] text-black dark:text-black font-medium">
                     Note: Some data here are placeholders, and the website is not fully optimized or finished yet.
                   </span>
+                </div>
+                <div className="mt-4 text-[11px] font-bold text-zinc-600 dark:text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                  Click to explore <span className="text-lg leading-none group-hover:translate-x-1 transition-transform">→</span>
                 </div>
               </button>
             </div>
