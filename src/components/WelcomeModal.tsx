@@ -40,7 +40,7 @@ export function WelcomeModal() {
           >
             {/* Decorative background glow */}
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zinc-500/10 rounded-full blur-[80px] pointer-events-none" />
 
             <div className="relative z-10 text-center mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-2">
@@ -71,17 +71,22 @@ export function WelcomeModal() {
                 <p className="text-xs text-muted-foreground mb-3">
                   Clean, production-ready, and highly performant architecture.
                 </p>
-                <span className="text-[10px] text-blue-600/80 dark:text-blue-400/80 font-medium bg-blue-500/10 px-2 py-1 rounded">
-                  Note: Proceed here for the current demo, sir!
-                </span>
+                <div className="relative flex items-center justify-center w-full px-4 py-3 mt-2">
+                  <svg className="absolute inset-0 w-full h-full text-blue-500/10 dark:text-blue-500/20" preserveAspectRatio="none" viewBox="0 0 200 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 5,15 C 50,-5 150,5 195,10 C 205,50 195,90 190,95 C 140,105 50,95 10,90 C -5,50 0,20 5,15 Z" />
+                  </svg>
+                  <span className="relative z-10 text-[11px] text-black dark:text-black font-medium">
+                    Note: Proceed here for the current demo, sir!
+                  </span>
+                </div>
               </button>
 
               {/* Option 2: Creative Site */}
               <button
                 onClick={handleRedirect}
-                className="group flex flex-col items-center text-center p-6 rounded-xl border border-border bg-background hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300"
+                className="group flex flex-col items-center text-center p-6 rounded-xl border border-border bg-background hover:border-zinc-500/50 hover:bg-zinc-500/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-full bg-purple-500/10 text-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-full bg-zinc-500/10 text-zinc-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
@@ -90,9 +95,14 @@ export function WelcomeModal() {
                 <p className="text-xs text-muted-foreground mb-3">
                   High-end animations, 3D, and immersive scrollytelling.
                 </p>
-                <span className="text-[10px] text-purple-600/80 dark:text-purple-400/80 font-medium bg-purple-500/10 px-2 py-1 rounded">
-                  Note: Some data here are placeholders, and the website is not fully optimized or finished yet.
-                </span>
+                <div className="relative flex items-center justify-center w-full px-4 py-3 mt-2">
+                  <svg className="absolute inset-0 w-full h-full text-zinc-500/10 dark:text-zinc-500/20" preserveAspectRatio="none" viewBox="0 0 200 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 10,5 C 60,10 140,-5 190,10 C 200,40 195,80 185,95 C 130,100 70,105 15,90 C 5,60 -5,20 10,5 Z" />
+                  </svg>
+                  <span className="relative z-10 text-[11px] text-black dark:text-black font-medium">
+                    Note: Some data here are placeholders, and the website is not fully optimized or finished yet.
+                  </span>
+                </div>
               </button>
             </div>
           </motion.div>

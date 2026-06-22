@@ -8,20 +8,20 @@ const CERTIFICATIONS = [
     issuer: "GitHub",
   },
   {
-    name: "TBI Program Participant (Syntaxure Labs)",
-    issuer: "Technology Business Incubator",
+    name: "TBI Program Incubatee (Syntaxure Labs)",
+    issuer: "Kwadra TBI",
   },
   {
     name: "CHED Raise AI Societal Empowerment",
-    issuer: "CHED",
+    issuer: "Commission on Higher Education",
   },
   {
     name: "ASEAN AI Hackathon 2026",
-    issuer: "ASEAN AI",
+    issuer: "Passage to ASEAN - P2A International",
   },
   {
     name: "Startup Hackathon 2025 Participant",
-    issuer: "MorProGres",
+    issuer: "Iloilo MorProGres",
   },
 ];
 
