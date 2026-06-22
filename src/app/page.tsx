@@ -6,6 +6,7 @@ import { Experience } from "@/components/Experience";
 import { Certifications } from "@/components/Certifications";
 import { SocialLinks } from "@/components/SocialLinks";
 import { Footer } from "@/components/Footer";
+import { WelcomeModal } from "@/components/WelcomeModal";
 import * as motion from "motion/react-client";
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20 relative"
     >
+      <WelcomeModal />
+      
       {/* Ambient Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-[400px] bg-accent/20 blur-[120px] rounded-full pointer-events-none -z-10 hidden dark:block" />
 
