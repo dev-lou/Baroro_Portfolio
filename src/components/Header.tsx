@@ -64,12 +64,12 @@ export function Header() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-1 mt-6 border border-border rounded-lg p-1 w-full sm:w-max bg-card">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-1 mt-6 sm:border sm:border-border sm:rounded-lg sm:p-1 w-full sm:w-max sm:bg-card">
               <MagneticButton
                 as="a"
                 href="#"
                 onClick={(e: React.MouseEvent) => { e.preventDefault(); setIsScheduleOpen(true); }}
-                className="inline-flex justify-center items-center gap-2 px-4 py-2 bg-black text-white dark:bg-white dark:text-black text-sm font-bold rounded-md hover:opacity-90 transition-all shadow-sm hover:shadow-md cursor-pointer"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-4 py-2.5 sm:py-2 bg-black text-white dark:bg-white dark:text-black text-sm font-bold rounded-lg sm:rounded-md hover:opacity-90 transition-all shadow-sm hover:shadow-md cursor-pointer border border-transparent"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -82,7 +82,7 @@ export function Header() {
               <MagneticButton
                 as="a"
                 href="mailto:louvincentj@gmail.com"
-                className="inline-flex justify-center items-center gap-2 px-4 py-2 text-foreground text-sm font-medium rounded-md hover:bg-muted transition-all shadow-sm hover:shadow-md border border-border/50"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-4 py-2.5 sm:py-2 text-foreground text-sm font-medium rounded-lg sm:rounded-md hover:bg-muted transition-all shadow-sm hover:shadow-md border border-border sm:border-border/50 bg-card sm:bg-transparent"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
