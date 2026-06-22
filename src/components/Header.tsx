@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
+import { ScheduleModal } from "./ScheduleModal";
+import { MagneticButton } from "./animations/MagneticButton";
 
 const ROLES = [
   "AI Native",
@@ -8,6 +11,8 @@ const ROLES = [
 ];
 
 export function Header() {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+
   return (
     <section className="relative">
       <div className="flex flex-col sm:flex-row gap-6 items-start justify-between">
@@ -60,9 +65,11 @@ export function Header() {
 
             {/* CTA Buttons */}
             <div className="flex items-center gap-1 mt-6 border border-border rounded-lg p-1 w-max bg-card">
-              <a
+              <MagneticButton
+                as="a"
                 href="#"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white dark:bg-white dark:text-black text-sm font-bold rounded-md hover:opacity-90 transition-all shadow-sm hover:shadow-md"
+                onClick={(e: React.MouseEvent) => { e.preventDefault(); setIsScheduleOpen(true); }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white dark:bg-white dark:text-black text-sm font-bold rounded-md hover:opacity-90 transition-all shadow-sm hover:shadow-md cursor-pointer"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -71,8 +78,9 @@ export function Header() {
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
-              <a
+              </MagneticButton>
+              <MagneticButton
+                as="a"
                 href="mailto:louvincentj@gmail.com"
                 className="inline-flex items-center gap-2 px-4 py-2 text-foreground text-sm font-medium rounded-md hover:bg-muted transition-all shadow-sm hover:shadow-md border border-border/50"
               >
@@ -80,7 +88,7 @@ export function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Send Email
-              </a>
+              </MagneticButton>
             </div>
           </div>
         </div>
@@ -88,17 +96,18 @@ export function Header() {
         {/* Right side stuff (Theme toggle + Badge) */}
         <div className="flex flex-col items-end gap-6 pt-1">
           <ThemeToggle />
-          <div className="bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-md flex items-center gap-2 cursor-pointer hover:bg-blue-700 transition-colors">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L15 8H9L12 2zM3 10H21V12H3V10zM5 14H19L17 22H7L5 14z" />
-            </svg>
-            DICT AI Productivity and Automation Participant
-            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
+          <div className="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-md flex flex-col items-center justify-center gap-1 cursor-default shadow-sm text-center">
+            <span className="opacity-90 font-medium text-[10px] uppercase tracking-wider">Made during</span>
+            <div className="flex items-center gap-1.5">
+              <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L15 8H9L12 2zM3 10H21V12H3V10zM5 14H19L17 22H7L5 14z" />
+              </svg>
+              <span>DICT AI Productivity and Automation</span>
+            </div>
           </div>
         </div>
       </div>
+      <ScheduleModal isOpen={isScheduleOpen} onClose={() => setIsScheduleOpen(false)} />
     </section>
   );
 }

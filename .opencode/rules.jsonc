@@ -1,0 +1,19 @@
+{
+  "importAlias": {
+    "prefix": "@",
+    "baseUrl": "./src"
+  },
+
+  "commands": {
+    "dev": "pnpm dev",
+    "build": "pnpm build",
+    "lint": "pnpm lint",
+    "typecheck": "pnpm typecheck"
+  },
+
+  "fileNaming": {
+    "components": "PascalCase",
+    "pages": "kebab-case",
+    "utilities": "camelCase"
+  }
+}

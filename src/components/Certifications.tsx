@@ -1,23 +1,37 @@
 const CERTIFICATIONS = [
   {
-    name: "ASEAN AI Hackathon 2026 Workshop 1-3",
-    issuer: "ASEAN AI Hackathon",
+    name: "NVIDIA Developer Program Member",
+    issuer: "NVIDIA",
   },
   {
-    name: "Top 10 Climate Track (Ongoing)",
-    issuer: "ASEAN AI Hackathon",
+    name: "GitHub Developer Program Member",
+    issuer: "GitHub",
   },
   {
-    name: "MorProGres 2025 Startup Hackathon Participant",
+    name: "TBI Program Participant (Syntaxure Labs)",
+    issuer: "Technology Business Incubator",
+  },
+  {
+    name: "CHED Raise AI Societal Empowerment",
+    issuer: "CHED",
+  },
+  {
+    name: "ASEAN AI Hackathon 2026",
+    issuer: "ASEAN AI",
+  },
+  {
+    name: "Startup Hackathon 2025 Participant",
     issuer: "MorProGres",
   },
 ];
 
+import { RevealStagger } from "./animations/RevealStagger";
+
 export function Certifications() {
   return (
     <section>
-      <h2 className="text-xl font-bold text-foreground mb-4">Certifications</h2>
-      <div className="space-y-2">
+      <h2 className="text-2xl font-bold text-foreground mb-6 tracking-tight">Certifications & Recognitions</h2>
+      <RevealStagger className="space-y-3">
         {CERTIFICATIONS.map((cert) => (
           <div
             key={cert.name}
@@ -36,7 +50,7 @@ export function Certifications() {
             </svg>
           </div>
         ))}
-      </div>
+      </RevealStagger>
     </section>
   );
 }

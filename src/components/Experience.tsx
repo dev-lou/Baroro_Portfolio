@@ -6,6 +6,12 @@ const EXPERIENCE = [
     description: "Leading technical architecture and AI-native development initiatives.",
   },
   {
+    role: "Semi-Finalist\n(Top 10 Climate Track)",
+    company: "ASEAN AI Hackathon",
+    period: "2026 — Ongoing",
+    description: "Developing innovative AI solutions for climate tech challenges.",
+  },
+  {
     role: "Independent Developer",
     company: "Personal Projects & Hackathons",
     period: "2023 — 2026",
@@ -16,23 +22,25 @@ const EXPERIENCE = [
 const EDUCATION = [
   {
     role: "BS Information Technology",
-    company: "University",
-    period: "2021 — 2026",
+    company: "Iloilo State University of Fisheries Science and Technology",
+    period: "2023 — 2027",
     description: "Specialized in software engineering and AI systems.",
   },
 ];
+
+import { RevealStagger } from "./animations/RevealStagger";
 
 export function Experience() {
   return (
     <section>
       <h2 className="text-xl font-bold text-foreground mb-4">Experience</h2>
-      <div className="relative ml-3 border-l-2 border-timeline-line">
+      <RevealStagger className="relative ml-3 border-l-2 border-timeline-line">
         {EXPERIENCE.map((item, index) => (
           <div key={item.role + item.company} className="relative pl-6 pb-6 last:pb-0">
             <div className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-background bg-accent ring-2 ring-accent/30 shadow-sm ${index === 0 ? "animate-pulse" : ""}`} />
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-semibold text-foreground text-sm">{item.role}</h3>
+                <h3 className="font-semibold text-foreground text-sm whitespace-pre-wrap leading-tight">{item.role}</h3>
                 <p className="text-sm text-accent">{item.company}</p>
                 <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
               </div>
@@ -57,7 +65,7 @@ export function Experience() {
             </div>
           ))}
         </div>
-      </div>
+      </RevealStagger>
     </section>
   );
 }
